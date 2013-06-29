@@ -1,0 +1,45 @@
+######################################
+#  Deb, Discontinuous, alpha=2, q=4  #
+######################################
+
+DIMENSION 2
+
+DISPLAY_DEGREE 3          # Full display is set
+
+BB_EXE         bb.exe
+BB_OUTPUT_TYPE OBJ OBJ
+
+MULTI_F_BOUNDS 0.0 4.0 0.0 4.0
+
+x0 ( 0.51 0.51 )
+
+lower_bound * 0.0
+upper_bound * 1.0
+
+#MULTI_FORMULATION PRODUCT
+#MAX_BB_EVAL           50
+MULTI_OVERALL_BB_EVAL 1000
+#MULTI_NB_MADS_RUNS    10
+#MAX_EVAL 1000
+#MAX_SIM_BB_EVAL 0
+
+INITIAL_MESH_SIZE 0.01
+#MIN_MESH_SIZE 0.0001
+
+MULTI_USE_DELTA_CRIT YES
+DISPLAY_ALL_EVAL YES
+
+ADD_SEED_TO_FILE_NAMES no
+STATS_FILE front.txt OBJ
+HISTORY_FILE history.txt
+
+SEED 1
+
+DISPLAY_STATS BBE ( SOL ) OBJ
+
+TMP_DIR        /tmp          # indicates a repertory where
+                              # temporary files are put
+                              # (increases performance by ~100%
+                              # if you're working on a network
+                              # account and if TMP_DIR is on a
+                              # local disk)

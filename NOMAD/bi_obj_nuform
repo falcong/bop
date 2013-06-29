@@ -1,0 +1,3 @@
+g++ -ansi -Wall -O3  -I/s/shubhgd/mathsoft/NOMAD/nomad.3.5.1/src -I. -c bb.cpp
+
+g++ -o bb.exe *.o /s/shubhgd/mathsoft/NOMAD/nomad.3.5.1/lib/nomad.a -lm -ansi -Wall -O3 /usr/local/lib/gcc-lib/i686-suse-linux-gnu/4.0.3/libf95.a
