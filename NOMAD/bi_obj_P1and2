@@ -1,3 +1,0 @@
-g++ -ansi -Wall -O3  -I/home/shubhangi/nomad.3.5.1/src -I. -c bb.cpp
-
-g++ -o bb.exe *.o /home/shubhangi/nomad.3.5.1/lib/nomad.a -lm -ansi -Wall 
